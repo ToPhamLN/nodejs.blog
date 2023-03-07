@@ -16,6 +16,10 @@ class SiteController {
         res.render('search');
     }
 
+    otos(req, res) {
+        res.render('otos');
+    }
+
 }
     
 
