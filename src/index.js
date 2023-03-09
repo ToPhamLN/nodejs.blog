@@ -9,7 +9,7 @@ const post = 3000;
 
 const route = require('./routes');
 const db = require('./config/db');
-//Xử lý file tĩnh (ảnh, video)
+//static file (img, video)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // midlewave

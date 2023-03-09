@@ -6,27 +6,17 @@ class NewsController {
     index(req, res) {
         res.render( 'news');        
     }
-    //
-//     MyModel.find({ someField: 'someValue' })
-//   .then(docs) => {
-//     // do something with docs
-//   })
-//   .catch(err) => {
-//     // handle error
-//   }
-    //
-
+ 
     // [GET] /news/:slug
-    show(req, res) {
-
-        
-        New.find({}, function (err, news) {
-            if(!err) {
-                res.send(news);
-            } else {
-            res.status(400).json({ error: 'Error!!' });
-            }  
-        });
+    show(req, res, next) {       
+        // New.find({})
+        //     .then(news => res.send(news))
+        //     .catch(error => next(error));
+        New.find({})
+            .then(news => res.render('news', {
+                news
+            }))
+            .catch(next);
 
         //res.send('New slug!');
     }
