@@ -6,7 +6,7 @@ const siteController = require('../app/controllers/SiteController');
 // Routes of News
 router.get('/search', siteController.search);
 router.get('/', siteController.index);
-router.get('/otos', siteController.otos);
+router.get('/otos', siteController.otoss);
 
 
 module.exports = router;
