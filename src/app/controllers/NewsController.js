@@ -1,15 +1,10 @@
-const New = require('../models/New');
+
 
 class NewsController {
 
     // [GET] /news
     index(req, res, next) {   
-        
-       New.find({})
-            .then(news => res.render('news', {
-                news
-            }))
-            .catch(next);       
+        res.send('News');
             
     }
  
